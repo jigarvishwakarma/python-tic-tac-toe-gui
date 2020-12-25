@@ -118,15 +118,17 @@ def tictactoe():
             return chance
     
     defineChance()
+    def playmusic():
+        try:
+            mixer.music.play()
+        except:
+            print("audio file is missing :/")
     def b1():
         global value1,value2,value3,value4,value5,value6,value7,value8,value9,turns
         value1=defineChance()
         btton1=Button(root,text=value1,height=7,width=15,font=('arial', 9,"bold"),bg=bg2,fg=fg1).grid(row=20,column=11,columnspan=2)
         checkPossibilities()
-        try:
-            mixer.music.play()
-        except:
-            pass
+        playmusic()
         
 
     def b2():
@@ -134,80 +136,57 @@ def tictactoe():
         value2=defineChance()
         btton2=Button(root,text=value2,height=7,width=15,font=('arial', 9,"bold"),bg=bg2,fg=fg1).grid(row=20,column=15,columnspan=2)
         checkPossibilities()
-        try:
-            mixer.music.play()
-        except:
-            pass
+        playmusic()
 
     def b3():
         global value1,value2,value3,value4,value5,value6,value7,value8,value9,turns
         value3=defineChance()
         btton3=Button(root,text=value3,height=7,width=15,font=('arial', 9,"bold"),bg=bg2,fg=fg1).grid(row=20,column=19,columnspan=2)
         checkPossibilities()
-        try:
-            mixer.music.play()
-        except:
-            pass
+        playmusic()
 
     def b4():
         global value1,value2,value3,value4,value5,value6,value7,value8,value9,turns
         value4=defineChance()
         btton4=Button(root,text=value4,height=7,width=15,font=('arial', 9,"bold"),bg=bg2,fg=fg1).grid(row=24,column=11,columnspan=2)
         checkPossibilities()
-        try:
-            mixer.music.play()
-        except:
-            pass
+        playmusic()
 
     def b5():
         global value1,value2,value3,value4,value5,value6,value7,value8,value9,turns
         value5=defineChance()
         btton5=Button(root,text=value5,height=7,width=15,font=('arial', 9,"bold"),bg=bg2,fg=fg1).grid(row=24,column=15,columnspan=2)
         checkPossibilities()
-        try:
-            mixer.music.play()
-        except:
-            pass
+        playmusic()
 
     def b6():
         global value1,value2,value3,value4,value5,value6,value7,value8,value9,turns
         value6=defineChance()
         btton6=Button(root,text=value6,height=7,width=15,font=('arial', 9,"bold"),bg=bg2,fg=fg1).grid(row=24,column=19,columnspan=2)
         checkPossibilities()
-        try:
-            mixer.music.play()
-        except:
-            pass
+        playmusic()
 
     def b7():
         global value1,value2,value3,value4,value5,value6,value7,value8,value9,turns
         value7=defineChance()
         btton7=Button(root,text=value7,height=7,width=15,font=('arial', 9,"bold"),bg=bg2,fg=fg1).grid(row=28,column=11,columnspan=2)
         checkPossibilities()
-        try:
-            mixer.music.play()
-        except:
-            pass
+        playmusic()
 
     def b8():
         global value1,value2,value3,value4,value5,value6,value7,value8,value9,turns
         value8=defineChance()
         btton8=Button(root,text=value8,height=7,width=15,font=('arial', 9,"bold"),bg=bg2,fg=fg1).grid(row=28,column=15,columnspan=2)
         checkPossibilities()
-        try:
-            mixer.music.play()
-        except:
-            pass
+        playmusic()
         
     def b9():
         global value1,value2,value3,value4,value5,value6,value7,value8,value9,turns
         value9=defineChance()
         btton9=Button(root,text=value9,height=7,width=15,font=('arial', 9,"bold"),bg=bg2,fg=fg1).grid(row=28,column=19,columnspan=2)
         checkPossibilities()
-        try:
-            mixer.music.play()
-        except:
-            pass
+        playmusic()
+        
 
     def key_press(event): 
         key = event.char
@@ -227,7 +206,7 @@ def tictactoe():
             b7()
         elif key=="8":
             b8()
-        else:
+        elif key=="9":
             b9()
     #================================GUI Part==============================
         
